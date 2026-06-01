@@ -5,355 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Community Event Portal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body{
-            background-color:#f4f4f4;
-        }
-
-        #welcomeBanner{
-            background-color:blue;
-            color:white;
-            padding:20px;
-            text-align:center;
-            border-radius:10px;
-        }
-
-    </style>
-
 </head>
 
 <body>
 
-    <header id="mainHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Community Portal</a>
 
-        <!-- Inline CSS -->
-        <h1 style="color:red;">
-            Local Community Event Portal
-        </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <p>
-            Welcome to the Local Community Services
-        </p>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
 
-    </header>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
 
-    <nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
 
-        <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registration">Registration</a>
+                    </li>
 
-            <li><a href="#home">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
 
-            <li><a href="#events">Events</a></li>
-
-            <li><a href="#gallery">Gallery</a></li>
-
-            <li><a href="#registration">Registration</a></li>
-
-            <li><a href="#feedback">Feedback</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-            <li>
-                <a href="help.html" target="_blank">
-                    Help
-                </a>
-            </li>
-
-        </ul>
-
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <header id="mainHeader">
+        <div class="container">
+            <h1>Local Community Event Portal</h1>
+            <p>Manage Events, Registrations and Community Activities</p>
+        </div>
+    </header>
 
-    <section id="home" class="eventCard">
+    <div class="container mt-4" id="home">
 
-        <div id="welcomeBanner">
+        <div class="row">
 
-            <h2>Welcome User</h2>
+            <div class="col-md-4">
+                <div class="card eventCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Music Festival</h5>
+                        <p class="card-text">
+                            Annual music celebration.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <p class="highlight">
-                Registration Open for Community Events
-            </p>
+            <div class="col-md-4">
+                <div class="card eventCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Sports Meet</h5>
+                        <p class="card-text">
+                            Community sports competition.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <span style="color:red; font-weight:bold;">
-                Special Offer : Free Entry for First 50 Members
-            </span>
+            <div class="col-md-4">
+                <div class="card eventCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Workshop</h5>
+                        <p class="card-text">
+                            Skill development workshop.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <section id="events" class="eventCard">
+    <section class="container mt-5" id="events">
 
-        <h2>Upcoming Events</h2>
+        <h2>Available Events</h2>
 
-        <h3>Community Programs</h3>
-
-        <p class="description">
-            The local council organizes various programs
-            including music festivals, sports events,
-            food carnivals and workshops for residents.
-        </p>
-
-        <ul>
-
-            <li>Music Festival</li>
-
-            <li>Sports Competition</li>
-
-            <li>Food Carnival</li>
-
-            <li>Skill Development Workshop</li>
-
-        </ul>
+        <div id="eventContainer"></div>
 
     </section>
 
-    <section id="gallery" class="eventCard">
+    <section class="container mt-5" id="registration">
 
-        <h2>Event Gallery</h2>
+        <h2>Registration Form</h2>
 
-        <table>
-
-            <tr>
-
-                <th>Event Image</th>
-
-                <th>Event Image</th>
-
-                <th>Event Image</th>
-
-            </tr>
-
-            <tr>
-
-                <td>
-
-                    <img src="event1.jpg"
-                    alt="Music Event"
-                    title="Music Event"
-                    class="eventImage">
-
-                    <p>Music Festival</p>
-
-                </td>
-
-                <td>
-
-                    <img src="event2.jpg"
-                    alt="Food Event"
-                    title="Food Event"
-                    class="eventImage">
-
-                    <p>Food Carnival</p>
-
-                </td>
-
-                <td>
-
-                    <img src="event3.jpg"
-                    alt="Sports Event"
-                    title="Sports Event"
-                    class="eventImage">
-
-                    <p>Sports Day</p>
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>
-
-                    <img src="event4.jpg"
-                    alt="Dance Event"
-                    title="Dance Event"
-                    class="eventImage">
-
-                    <p>Dance Program</p>
-
-                </td>
-
-                <td>
-
-                    <img src="event5.jpg"
-                    alt="Art Event"
-                    title="Art Event"
-                    class="eventImage">
-
-                    <p>Art Exhibition</p>
-
-                </td>
-
-                <td>
-
-                    <img src="event6.jpg"
-                    alt="Workshop Event"
-                    title="Workshop Event"
-                    class="eventImage">
-
-                    <p>Workshop</p>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <section id="registration" class="eventCard">
-
-        <h2>Event Registration Form</h2>
-
-        <form onsubmit="showMessage(); return false;">
-
-            <label>Name</label>
+        <form id="registrationForm">
 
             <input type="text"
-            placeholder="Enter your name"
-            required
-            autofocus>
-
-            <label>Email</label>
+                name="name"
+                class="form-control mb-3"
+                placeholder="Enter Name">
 
             <input type="email"
-            placeholder="Enter your email"
-            required>
+                name="email"
+                class="form-control mb-3"
+                placeholder="Enter Email">
 
-            <label>Date</label>
-
-            <input type="date" required>
-
-            <label>Event Type</label>
-
-            <select required>
-
-                <option value="">
-                    Select Event
-                </option>
-
-                <option>Music</option>
-
-                <option>Sports</option>
-
-                <option>Workshop</option>
-
-            </select>
-
-            <label>Message</label>
-
-            <textarea
-            placeholder="Enter message">
-            </textarea>
-
-            <button type="submit"
-            class="cta-button">
-
+            <button
+                type="submit"
+                class="btn btn-primary"
+                id="registerBtn">
                 Register
-
             </button>
-
-            <br><br>
-
-            <output id="result"></output>
 
         </form>
 
+        <p id="message"></p>
+
     </section>
 
+    <section class="container mt-5">
 
-    <section id="feedback" class="eventCard">
-
-        <h2>Event Feedback</h2>
-
-        <label>Phone Number</label>
-
-        <input type="text"
-        id="phone"
-        onblur="validatePhone()">
-
-        <label>Select Event</label>
+        <h2>Event Fee</h2>
 
         <select id="event"
-        onchange="showFee()">
+            class="form-select"
+            onchange="showFee()">
 
             <option>Music</option>
-
             <option>Sports</option>
-
             <option>Workshop</option>
 
         </select>
 
-        <p id="fee"></p>
-
-        <h3>Double Click the Image</h3>
-
-        <img src="event1.jpg"
-        width="150"
-        height="100"
-        ondblclick="enlargeImage(this)">
-
-        <br><br>
-
-        <label>Feedback Message</label>
-
-        <textarea id="feedbackText"
-        onkeyup="countCharacters()">
-        </textarea>
-
-        <p id="charCount">
-            Characters : 0
-        </p>
-
-        <button onclick="confirmSubmit()"
-        class="cta-button">
-
-            Submit Feedback
-
-        </button>
+        <p id="fee" class="mt-3"></p>
 
     </section>
 
-    <section class="eventCard">
+    <section class="container mt-5">
 
-        <h2>Event Promo Video</h2>
+        <h2>User Preference</h2>
 
-        <video width="500"
-        controls
-        oncanplay="videoReady()">
-
-            <source src="promo.mp4"
-            type="video/mp4">
-
-        </video>
-
-        <p id="videoMsg"></p>
-
-    </section>
-
-
-    <section class="eventCard">
-
-        <h2>Save User Preferences</h2>
-
-        <select id="eventType"
-        onchange="savePreference()">
+        <select
+            id="eventType"
+            class="form-select"
+            onchange="savePreference()">
 
             <option>Music</option>
-
             <option>Sports</option>
-
             <option>Workshop</option>
 
         </select>
 
-        <br><br>
-
-        <button onclick="clearPreferences()"
-        class="cta-button">
+        <button
+            class="btn btn-danger mt-3"
+            onclick="clearPreferences()">
 
             Clear Preferences
 
@@ -361,256 +174,117 @@
 
     </section>
 
+    <section class="container mt-5">
 
-    <section class="eventCard">
+        <h2>Geolocation</h2>
 
-        <h2>Find Nearby Events</h2>
+        <button
+            class="btn btn-success"
+            onclick="findLocation()">
 
-        <button onclick="findLocation()"
-        class="cta-button">
-
-            Find Nearby Events
+            Find Location
 
         </button>
 
-        <p id="location"></p>
+        <p id="location" class="mt-3"></p>
 
     </section>
 
+    <section class="container mt-5">
 
-    <section class="eventCard">
+        <button
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#eventModal">
 
-        <h2>Community Bulletin</h2>
+            Open Modal
 
-        <div class="newsArticle">
+        </button>
 
-            The local community portal provides
-            information about upcoming events,
-            awareness programs, educational workshops,
-            music festivals, health camps, sports
-            competitions, and food carnivals for
-            residents. Citizens can register online,
-            access event schedules, and locate nearby
-            community centers easily through this
-            responsive web application.
+    </section>
+
+    <div class="modal fade" id="eventModal">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Event Information
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+                    Bootstrap Modal Example
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="container mt-5">
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+
+                        Event Details
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show">
+
+                    <div class="accordion-body">
+
+                        Community event information.
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
+    <footer id="contact">
 
-    <section class="eventCard">
+        <h4>Contact Us</h4>
 
-        <h2>Visibility Example</h2>
+        <p>Email: support@communityportal.com</p>
 
-        <div class="hiddenBox">
-            This box is hidden using visibility:hidden
-        </div>
-
-        <div class="noneBox">
-            This box is removed using display:none
-        </div>
-
-    </section>
-
-
-    <section id="contact" class="eventCard">
-
-        <h2>Contact Us</h2>
-
-        <p>Email : support@communityportal.com</p>
-
-        <p>Phone : +91 9876543210</p>
-
-    </section>
-
-
-    <footer>
-
-        <p>
-            © 2026 Local Community Event Portal
-        </p>
+        <p>Phone: +91 9876543210</p>
 
     </footer>
 
-    <script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        function showMessage(){
-
-            document.getElementById("result").value =
-            "Registration Submitted Successfully";
-        }
-
-
-        function validatePhone(){
-
-            let phone =
-            document.getElementById("phone").value;
-
-            if(phone.length != 10){
-
-                alert("Phone number must contain 10 digits");
-            }
-        }
-
-
-        function showFee(){
-
-            let event =
-            document.getElementById("event").value;
-
-            let fee = "";
-
-            if(event == "Music"){
-
-                fee = "Fee : ₹500";
-            }
-
-            else if(event == "Sports"){
-
-                fee = "Fee : ₹300";
-            }
-
-            else{
-
-                fee = "Fee : ₹700";
-            }
-
-            document.getElementById("fee").innerHTML = fee;
-        }
-
-
-        function confirmSubmit(){
-
-            alert("Feedback Submitted Successfully");
-        }
-
-
-        function enlargeImage(img){
-
-            img.style.width = "300px";
-
-            img.style.height = "200px";
-        }
-
-        function countCharacters(){
-
-            let text =
-            document.getElementById("feedbackText").value;
-
-            document.getElementById("charCount").innerHTML =
-            "Characters : " + text.length;
-        }
-
-
-        function videoReady(){
-
-            document.getElementById("videoMsg").innerHTML =
-            "Video Ready to Play";
-        }
-
-        window.onbeforeunload = function(){
-
-            return "Are you sure you want to leave?";
-        };
-
-        function savePreference(){
-
-            let eventType =
-            document.getElementById("eventType").value;
-
-            localStorage.setItem(
-                "preferredEvent",
-                eventType
-            );
-        }
-
-        function loadPreference(){
-
-            let saved =
-            localStorage.getItem("preferredEvent");
-
-            if(saved){
-
-                document.getElementById("eventType").value =
-                saved;
-            }
-        }
-
-        function clearPreferences(){
-
-            localStorage.clear();
-
-            sessionStorage.clear();
-
-            alert("Preferences Cleared");
-        }
-
-        window.onload = loadPreference;
-
-
-        function findLocation(){
-
-            if(navigator.geolocation){
-
-                navigator.geolocation.getCurrentPosition(
-
-                    showPosition,
-
-                    showError,
-
-                    {
-                        enableHighAccuracy:true,
-                        timeout:5000
-                    }
-                );
-
-            }else{
-
-                alert("Geolocation not supported");
-            }
-        }
-
-        function showPosition(position){
-
-            document.getElementById("location").innerHTML =
-
-            "Latitude : " +
-            position.coords.latitude +
-
-            "<br>Longitude : " +
-            position.coords.longitude;
-        }
-
-        function showError(error){
-
-            if(error.code == 1){
-
-                alert("Permission Denied");
-            }
-
-            else if(error.code == 3){
-
-                alert("Location Request Timeout");
-            }
-        }
-
-        let num1 = 10;
-
-        let num2 = 20;
-
-        console.log("Number 1 =", num1);
-
-        console.log("Number 2 =", num2);
-
-        let total = num1 + num2;
-
-        console.log("Total =", total);
-
-        debugger;
-
-    </script>
+    <script src="main.js"></script>
 
 </body>
 
